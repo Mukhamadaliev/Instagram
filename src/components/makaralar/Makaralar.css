@@ -1,0 +1,765 @@
+.video-feed-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-feed-makaralar {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    width: 100%;
+    max-width: 500px;
+    margin-left: -50px;
+}
+
+.video-card {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    scroll-snap-align: start;
+    position: relative;
+    background-color: #000;
+}
+
+.video-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 12px;
+    margin-bottom: 15px;
+}
+
+.username {
+    font-weight: 600;
+    margin-right: 12px;
+}
+
+.follow-btn {
+    background: #0095f6;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.follow-btn.following {
+    background: transparent;
+    border: 1px solid #dbdbdb;
+    color: #262626;
+}
+
+.icon-more {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.video-player {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.video-controls {
+    position: absolute;
+    bottom: 120px;
+    left: 0;
+    right: 0;
+    padding: 0 16px;
+    z-index: 10;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 3px;
+    background: #333;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #fff;
+}
+
+.controls-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.controls-left,
+.controls-right {
+    display: flex;
+    gap: 12px;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.time-display {
+    font-size: 12px;
+    align-self: center;
+}
+
+.video-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    right: 16px;
+    bottom: 160px;
+    z-index: 10;
+}
+
+.action-btn {
+    /* background: none; */
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+}
+
+.action-count {
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.liked-icon {
+    color: #ed4956;
+}
+
+.video-info {
+    position: absolute;
+    bottom: 40px;
+    left: 16px;
+    right: 16px;
+    z-index: 10;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.likes-count {
+    font-weight: bold;
+    margin: 0;
+}
+
+.caption {
+    margin: 4px 0 0;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #111;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.comment-list {
+    margin-top: 10px;
+}
+
+.comment {
+    border-bottom: 1px solid #333;
+    padding: 4px 0;
+}
+
+.comment-form {
+    display: flex;
+    margin-top: 12px;
+}
+
+.comment-input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    background: #222;
+    color: #fff;
+}
+
+.comment-post-btn {
+    margin-left: 8px;
+    background: none;
+    border: none;
+    color: #0095f6;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-close-btn {
+    margin-top: 12px;
+    background: #333;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.share-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.share-options button {
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.share-btn-facebook {
+    background: #3b5998;
+}
+
+.share-btn-twitter {
+    background: #1da1f2;
+}
+
+.share-btn-whatsapp {
+    background: #25d366;
+}
+
+.share-btn-telegram {
+    background: #0088cc;
+}
+
+.share-btn-copy {
+    background: #333;
+}
+
+.modal-cancel-btn {
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+.share-user-list {
+    margin: 15px 0;
+}
+
+.share-user-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    border-bottom: 1px solid #333;
+}
+
+.share-user-item:last-child {
+    border-bottom: none;
+}
+
+.share-user-item img {
+    margin-right: 10px;
+}
+
+.comment-modal {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    height: 80%;
+    max-height: 700px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.modal-video-section {
+    flex: 1;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.modal-video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.modal-video-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.modal-control-btn {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-comments-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.comment-list {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.comment-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.comment {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.comment-form {
+    display: flex;
+    gap: 10px;
+}
+
+.comment-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+}
+
+.comment-post-btn {
+    padding: 10px 20px;
+    background: #0095f6;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.comment-post-btn:hover {
+    background: #0086e0;
+}
+
+.options-container {
+    position: relative;
+    display: inline-block;
+}
+
+.options-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    min-width: 120px;
+}
+
+.options-menu button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.options-menu button:last-child {
+    border-bottom: none;
+}
+
+
+.comment-actions-footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    margin-top: 15px;
+}
+
+.comment-actions-footer .action-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+}
+
+.comment-actions-footer .action-btn:hover {
+    color: #007bff;
+}
+
+.comment-actions-footer .liked-icon {
+    color: #ff0000;
+}
+
+
+@media (max-width: 1024px) {
+    .video-feed-makaralar {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .video-actions {
+        bottom: 200px;
+        right: 12px;
+    }
+
+    .video-info {
+        bottom: 60px;
+    }
+
+    .comment-modal {
+        width: 90%;
+        height: 85%;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-feed-container {
+        height: calc(100vh - 60px);
+    }
+
+    .video-feed-makaralar {
+        margin-left: 0;
+    }
+
+    .video-header {
+        padding: 8px 12px;
+    }
+
+    .profile-pic {
+        width: 28px;
+        height: 28px;
+    }
+
+    .username {
+        font-size: 14px;
+    }
+
+    .video-actions {
+        bottom: 180px;
+        right: 10px;
+        gap: 15px;
+    }
+
+    .action-btn {
+        font-size: 20px;
+    }
+
+    .action-count {
+        font-size: 12px;
+    }
+
+    .video-info {
+        bottom: 50px;
+        left: 10px;
+        right: 10px;
+    }
+
+    .comment-modal {
+        flex-direction: column;
+        width: 95%;
+        height: 90%;
+    }
+
+    .modal-video-section {
+        height: 40%;
+    }
+
+    .modal-comments-section {
+        height: 60%;
+    }
+}
+
+@media (max-width: 600px) {
+    .video-feed-container {
+        height: calc(100vh - 50px);
+    }
+
+    .video-header {
+        padding: 6px 10px;
+    }
+
+    .profile-pic {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+    }
+
+    .username {
+        font-size: 12px;
+        margin-right: 8px;
+    }
+
+    .follow-btn {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+
+    .video-controls {
+        bottom: 100px;
+        padding: 0 10px;
+    }
+
+    .controls-row {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+
+    .controls-right {
+        align-self: flex-end;
+    }
+
+    .video-actions {
+        bottom: 140px;
+        right: 8px;
+        gap: 12px;
+    }
+
+    .action-btn {
+        font-size: 18px;
+    }
+
+    .video-info {
+        bottom: 30px;
+        left: 8px;
+        right: 8px;
+        padding: 8px;
+    }
+
+    .likes-count,
+    .caption {
+        font-size: 14px;
+    }
+
+    .modal-content {
+        width: 90%;
+        max-height: 80vh;
+    }
+
+    .share-user-item {
+        padding: 8px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-header {
+        padding: 4px 8px;
+    }
+
+    .profile-pic {
+        width: 20px;
+        height: 20px;
+    }
+
+    .username {
+        font-size: 11px;
+    }
+
+    .follow-btn {
+        font-size: 9px;
+        padding: 3px 6px;
+    }
+
+    .video-controls {
+        bottom: 90px;
+    }
+
+    .control-btn {
+        font-size: 16px;
+    }
+
+    .time-display {
+        font-size: 10px;
+    }
+
+    .video-actions {
+        bottom: 120px;
+        gap: 10px;
+    }
+
+    .action-btn {
+        font-size: 16px;
+    }
+
+    .action-count {
+        font-size: 10px;
+    }
+
+    .video-info {
+        bottom: 20px;
+    }
+
+    .likes-count,
+    .caption {
+        font-size: 12px;
+    }
+
+    .comment-modal {
+        width: 98%;
+        height: 95%;
+    }
+
+    .modal-header h3 {
+        font-size: 16px;
+    }
+
+    .comment-input {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .comment-post-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    .video-header {
+        padding: 3px 6px;
+    }
+
+    .profile-pic {
+        width: 18px;
+        height: 18px;
+    }
+
+    .username {
+        font-size: 10px;
+    }
+
+    .video-controls {
+        bottom: 80px;
+    }
+
+    .video-actions {
+        bottom: 100px;
+        gap: 8px;
+    }
+
+    .action-btn {
+        font-size: 14px;
+    }
+
+    .video-info {
+        bottom: 15px;
+    }
+
+    .likes-count,
+    .caption {
+        font-size: 11px;
+    }
+}

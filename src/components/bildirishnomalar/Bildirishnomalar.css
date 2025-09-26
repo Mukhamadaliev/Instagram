@@ -1,0 +1,119 @@
+.notifications-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--bg-color-light);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+body.dark .notifications-container {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+.notifications-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color-light);
+    transition: border-bottom 0.3s ease;
+}
+
+body.dark .notifications-container h2 {
+    border-bottom: 1px solid var(--border-color-dark);
+}
+
+.notification-group h4 {
+    color: #8e8e8e;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.notification-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.notification-item:hover {
+    background-color: #f5f5f5;
+}
+
+body.dark .notification-item:hover {
+    background-color: #2e2e2e;
+}
+
+.profile-pic {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 1px solid var(--border-color-light);
+    transition: border-color 0.3s ease;
+}
+
+body.dark .profile-pic {
+    border: 1px solid var(--border-color-dark);
+}
+
+.notification-text {
+    flex-grow: 1;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.notification-text .username {
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+.notification-text .date {
+    color: #8e8e8e;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.notification-media {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    object-fit: cover;
+    margin-left: 10px;
+}
+
+.notification-btn {
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: auto;
+    transition: background-color 0.2s;
+}
+
+.notification-btn:hover {
+    background-color: #007bb5;
+}
+
+.notification-btn.following {
+    background-color: transparent;
+    color: var(--text-color-light);
+    border: 1px solid var(--border-color-light);
+}
+
+body.dark .notification-btn.following {
+    color: var(--text-color-dark);
+    border: 1px solid var(--border-color-dark);
+}

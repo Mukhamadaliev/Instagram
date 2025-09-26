@@ -1,0 +1,190 @@
+:root {
+  --bg-light: #fff;
+  --bg-secondary-light: #f0f2f5;
+  --border-light: #ddd;
+  --text-primary-light: #000;
+  --text-secondary-light: #65676b;
+  --hover-light: #f9f9f9;
+  --active-light: #efefef;
+  --bubble-other-bg-light: #e4e6eb;
+  --bubble-self-bg-light: #0095f6;
+  --bubble-self-text-light: white;
+  --bubble-other-text-light: #000;
+  --input-bg-light: #f0f2f5;
+
+  --bg-dark: #121212;
+  --bg-secondary-dark: #1e1e1e;
+  --border-dark: #333;
+  --text-primary-dark: #e4e6eb;
+  --text-secondary-dark: #b0b3b8;
+  --hover-dark: #2a2a2a;
+  --active-dark: #3a3a3a;
+  --bubble-other-bg-dark: #3a3b3c;
+  --bubble-self-bg-dark: #007acc;
+  --bubble-self-text-dark: #fff;
+  --bubble-other-text-dark: #e4e6eb;
+  --input-bg-dark: #3a3b3c;
+}
+
+/* Light rejim (standart) */
+body {
+  background-color: var(--bg-light);
+  color: var(--text-primary-light);
+}
+
+.messages-page {
+  background: var(--bg-light);
+  border: 1px solid var(--border-light);
+}
+
+.messages-sidebar {
+  border-right: 1px solid var(--border-light);
+  background: var(--bg-light);
+}
+
+.sidebar-header {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.notes-section {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.chat-section-header {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.section-link {
+  color: var(--bubble-self-bg-light);
+}
+
+.chat-item:hover {
+  background: var(--hover-light);
+}
+
+.chat-item.active {
+  background: var(--active-light);
+}
+
+.chat-details .username {
+  color: var(--text-primary-light);
+}
+
+.chat-details .last-message {
+  color: var(--text-secondary-light);
+}
+
+.messages-main-content {
+  background: var(--bg-secondary-light);
+}
+
+.chat-header {
+  border-bottom: 1px solid var(--border-light);
+  background: var(--bg-light);
+}
+
+.message-bubble.self {
+  background: var(--bubble-self-bg-light);
+  color: var(--bubble-self-text-light);
+}
+
+.message-bubble.other {
+  background: var(--bubble-other-bg-light);
+  color: var(--bubble-other-text-light);
+}
+
+.chat-input-area {
+  border-top: 1px solid var(--border-light);
+  background: var(--bg-light);
+}
+
+.chat-input-area input {
+  background: var(--input-bg-light);
+  color: var(--text-primary-light);
+}
+
+.chat-input-area button {
+  color: var(--bubble-self-bg-light);
+}
+
+
+/* Dark rejim uslublari */
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-primary-dark);
+}
+
+.dark-mode .messages-page {
+  background: var(--bg-dark);
+  border: 1px solid var(--border-dark);
+}
+
+.dark-mode .messages-sidebar {
+  border-right: 1px solid var(--border-dark);
+  background: var(--bg-dark);
+}
+
+.dark-mode .sidebar-header {
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.dark-mode .notes-section {
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.dark-mode .chat-section-header {
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.dark-mode .section-link {
+  color: var(--bubble-self-bg-dark);
+}
+
+.dark-mode .chat-item:hover {
+  background: var(--hover-dark);
+}
+
+.dark-mode .chat-item.active {
+  background: var(--active-dark);
+}
+
+.dark-mode .chat-details .username {
+  color: var(--text-primary-dark);
+}
+
+.dark-mode .chat-details .last-message {
+  color: var(--text-secondary-dark);
+}
+
+.dark-mode .messages-main-content {
+  background: var(--bg-secondary-dark);
+}
+
+.dark-mode .chat-header {
+  border-bottom: 1px solid var(--border-dark);
+  background: var(--bg-dark);
+}
+
+.dark-mode .message-bubble.self {
+  background: var(--bubble-self-bg-dark);
+  color: var(--bubble-self-text-dark);
+}
+
+.dark-mode .message-bubble.other {
+  background: var(--bubble-other-bg-dark);
+  color: var(--bubble-other-text-dark);
+}
+
+.dark-mode .chat-input-area {
+  border-top: 1px solid var(--border-dark);
+  background: var(--bg-dark);
+}
+
+.dark-mode .chat-input-area input {
+  background: var(--input-bg-dark);
+  color: var(--text-primary-dark);
+}
+
+.dark-mode .chat-input-area button {
+  color: var(--bubble-self-bg-dark);
+} 

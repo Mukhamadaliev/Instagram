@@ -1,0 +1,249 @@
+.yaratish-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.yaratish-modal-content {
+    background-color: white;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 700px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+    animation: modalAppear 0.3s ease;
+    cursor: default;
+}
+
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border-bottom: 1px solid #efefef;
+    position: relative;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #262626;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.modal-header .back-btn,
+.modal-header .close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #262626;
+    padding: 8px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+
+
+.upload-step {
+    padding: 60px 40px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.upload-step.dragover {
+    background-color: rgba(0, 149, 246, 0.05);
+}
+
+.upload-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.upload-icon {
+    margin-bottom: 16px;
+}
+
+.upload-text {
+    font-size: 20px;
+    color: #262626;
+    margin: 0;
+}
+
+.select-file-btn {
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.select-file-btn:hover {
+    background-color: #0077c6;
+}
+
+.edit-step {
+    display: flex;
+    flex-direction: column;
+    max-height: 70vh;
+}
+
+.media-preview {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.preview-media {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.caption-section {
+    padding: 16px;
+    border-top: 1px solid #efefef;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.username {
+    font-weight: 600;
+    font-size: 14px;
+    color: #262626;
+}
+
+.caption-input {
+    width: 100%;
+    border: 1px solid #efefef;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 100px;
+    margin-bottom: 8px;
+}
+
+.caption-input:focus {
+    outline: none;
+    border-color: #a8a8a8;
+}
+
+.char-counter {
+    text-align: right;
+    font-size: 12px;
+    color: #8e8e8e;
+    margin-bottom: 16px;
+}
+
+.share-btn {
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+.share-btn:hover:not(:disabled) {
+    background-color: #0077c6;
+}
+
+.share-btn:disabled {
+    background-color: #b3dbff;
+    cursor: not-allowed;
+}
+
+@media (min-width: 768px) {
+    .edit-step {
+        flex-direction: row;
+        max-height: 500px;
+    }
+    
+    .media-preview {
+        flex: 1;
+        min-height: auto;
+        max-height: 500px;
+        border-right: 1px solid #efefef;
+    }
+    
+    .caption-section {
+        flex: 0 0 300px;
+        border-top: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .yaratish-modal-content {
+        border-radius: 0;
+        height: 100vh;
+        max-width: none;
+    }
+    
+    .yaratish-modal-overlay {
+        padding: 0;
+    }
+    
+    .edit-step {
+        max-height: none;
+        height: calc(100vh - 53px);
+    }
+    
+    .media-preview {
+        flex: 1;
+    }
+}

@@ -1,0 +1,85 @@
+.not-found-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    padding: 1rem;
+    text-align: center;
+    width: 1150px; 
+}
+
+.not-found-title {
+    font-size: 6rem;
+    font-weight: 800;
+    color: #4f46e5;
+}
+
+.not-found-subtitle {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+.not-found-message {
+    font-size: 1.125rem;
+    color: #64748b;
+    margin-top: 0.5rem;
+    max-width: 32rem;
+}
+
+.not-found-button {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: #4f46e5;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.not-found-button:hover {
+    background-color: #4338ca;
+}
+
+
+@media (max-width: 768px) {
+    .not-found-container {
+        padding: 0.5rem;
+        width: 400px;
+    }
+    
+    .not-found-title {
+        font-size: 4rem; 
+    }
+
+    .not-found-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .not-found-message {
+        font-size: 1rem; 
+        padding: 0 1rem;
+    }
+
+    .not-found-button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .not-found-title {
+        font-size: 3rem;
+    }
+
+    .not-found-subtitle {
+        font-size: 1.25rem;
+    }
+}

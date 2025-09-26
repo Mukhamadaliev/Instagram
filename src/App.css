@@ -1,0 +1,161 @@
+/* src/App.css */
+
+:root {
+  --bg-color-light: #fafafa;
+  --text-color-light: #262626;
+  --border-color-light: #dbdbdb;
+  --bg-nav-light: #ffffff;
+  --hover-color-light: #f2f2f2;
+  --dropdown-bg-light: #ffffff;
+  --dropdown-item-hover-light: #fafafa;
+}
+
+.light {
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+}
+
+.dark {
+  background-color: #000000;
+  color: #ffffff;
+  --bg-color-dark: #000000;
+  --text-color-dark: #ffffff;
+  --border-color-dark: #444444;
+  --bg-nav-dark: #000000;
+  --hover-color-dark: #1a1a1a;
+  --dropdown-bg-dark: #262626;
+  --dropdown-item-hover-dark: #363636;
+}
+
+.max-width-App {
+  max-width: 1440px;
+  margin: 0 auto;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-app-container {
+  display: flex;
+}
+
+.content-container {
+  flex: 1;
+  padding-left: -244px; /* Sagbar.jsx kengligiga bog'liq */
+  transition: padding-left 0.3s ease;
+}
+
+.max-width-App.dark {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+.max-width-App.dark .sagbar {
+  background-color: var(--bg-nav-dark);
+  border-right-color: var(--border-color-dark);
+}
+
+.max-width-App.dark .sagbar-menu .link {
+  color: var(--text-color-dark);
+}
+
+.max-width-App.dark .sagbar-menu .link:hover,
+.max-width-App.dark .sagbar-menu .link.active {
+  background-color: var(--hover-color-dark);
+}
+
+.max-width-App.dark .sagbar-bottom-menu .div-icon {
+  color: var(--text-color-dark);
+}
+
+.max-width-App.dark .sagbar-bottom-menu .div-icon:hover {
+  background-color: var(--hover-color-dark);
+}
+
+.max-width-App.dark .profile-dropdown {
+  background-color: var(--dropdown-bg-dark);
+}
+
+.max-width-App.dark .dropdown-item:hover {
+  background-color: var(--dropdown-item-hover-dark);
+}
+
+.max-width-App.dark .profile-tabs {
+  border-top-color: var(--border-color-dark);
+}
+
+.max-width-App.dark .tab.active::after {
+  background-color: var(--text-color-dark);
+}
+
+.max-width-App.dark .profile-page-container {
+  color: var(--text-color-dark);
+}
+
+.max-width-App.dark .stat-label {
+  color: #8e8e8e;
+}
+
+.max-width-App.dark .action-btn {
+  background-color: #262626;
+  border-color: #444444;
+  color: #fff;
+}
+
+.max-width-App.dark .action-btn.following-btn {
+  background-color: #262626;
+}
+
+.max-width-App.dark .action-btn.following-btn:hover {
+  background-color: #363636;
+}
+
+.max-width-App.dark .follow-btn {
+  background-color: #0095f6;
+}
+
+.max-width-App.dark .profile-info h2 {
+  color: #fff;
+}
+
+.max-width-App.dark .profile-info p {
+  color: #8e8e8e;
+}
+
+.max-width-App.dark .profile-tabs .tab {
+  color: #8e8e8e;
+}
+
+.max-width-App.dark .profile-tabs .tab.active {
+  color: #fff;
+}
+
+.max-width-App.dark .empty-posts {
+  border-color: #444;
+  color: #fff;
+}
+
+.max-width-App.dark .modal-content {
+  background-color: #262626;
+  color: #fff;
+}
+
+.max-width-App.dark .modal-details {
+  background-color: #262626;
+  color: #fff;
+}
+
+.max-width-App.dark .modal-post-header {
+  border-bottom-color: #444;
+}
+
+.max-width-App.dark .modal-stats {
+  color: #8e8e8e;
+}
+
+.max-width-App.dark .close-modal-btn {
+  color: #fff;
+}
+
+.main-app-container .sagbar.active + .content-container {
+  padding-left: 72px;
+}
